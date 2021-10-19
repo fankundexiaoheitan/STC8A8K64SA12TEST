@@ -1,0 +1,1 @@
+"my_IIC.c" OPTIMIZE (8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\my_IIC.lst) OBJECT(.\Objects\my_IIC.obj)

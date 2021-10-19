@@ -1,0 +1,43 @@
+C51 COMPILER V9.54   MAIN                                                                  10/19/2021 17:59:32 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: C:\xuexigongju\keil\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\List
+                    -ings\main.lst) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include "STC8.h"
+   2          #include "oled.h"
+   3          #include "codetab.h"
+   4          
+   5          void main(void)
+   6          {
+   7   1              OLED_Init();
+   8   1              OLED_CLS();
+   9   1              OLED_BMP(0,0,bilibili);
+  10   1              while(1)
+  11   1              {
+  12   2                      OLED_BMP(0,0,bilibili);
+  13   2                      delay(10000);
+  14   2                      OLED_BMP(0,0,huoying);
+  15   2                      delay(10000);
+  16   2              }
+  17   1      }
+  18          
+  19          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     58    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

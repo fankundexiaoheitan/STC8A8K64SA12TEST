@@ -1,0 +1,7 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj",
+".\Objects\oled.obj",
+".\Objects\codetab.obj",
+".\Objects\my_IIC.obj" 
+TO ".\Objects\Çý¶¯oled" 
+PRINT(".\Listings\Çý¶¯oled.m51") RAMSIZE(256) 

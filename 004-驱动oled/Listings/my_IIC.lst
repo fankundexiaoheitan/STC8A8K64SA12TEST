@@ -1,0 +1,120 @@
+C51 COMPILER V9.54   MY_IIC                                                                10/19/2021 17:29:27 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE MY_IIC
+OBJECT MODULE PLACED IN .\Objects\my_IIC.obj
+COMPILER INVOKED BY: C:\xuexigongju\keil\C51\BIN\C51.EXE my_IIC.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Li
+                    -stings\my_IIC.lst) OBJECT(.\Objects\my_IIC.obj)
+
+line level    source
+
+   1          #include "my_IIC.h"
+   2          #include "intrins.h"
+   3          
+   4          //延时大约5us
+   5          void delay_5us()
+   6          {
+   7   1              _nop_();_nop_();_nop_();_nop_();_nop_();_nop_();
+   8   1              _nop_();_nop_();_nop_();_nop_();_nop_();_nop_();
+   9   1              _nop_();_nop_();_nop_();_nop_();_nop_();_nop_();
+  10   1              _nop_();_nop_();_nop_();_nop_();_nop_();_nop_();
+  11   1              _nop_();_nop_();_nop_();_nop_();_nop_();_nop_();
+  12   1      }
+  13          
+  14          
+  15          /**************IIC起始信号****************/
+  16          //在时钟线为高电平的情况下使数据线成下降沿
+  17          void IIC_Start(void)
+  18          {
+  19   1              SDA = 1;                //拉高数据线
+  20   1              SCL = 1;                //拉高时钟线
+  21   1              delay_5us();
+  22   1              SDA = 0;                //拉低数据线
+  23   1              delay_5us();
+  24   1              SCL = 0;                //拉低时钟线
+  25   1      }
+  26          
+  27          /**************IIC停止信号****************/
+  28          //在时钟线为高电平的情况下使数据线成上升沿
+  29          void IIC_Stop(void)
+  30          {
+  31   1              SDA     = 0;            //拉低数据线
+  32   1              SCL = 1;                //拉高时钟线
+  33   1              delay_5us();
+  34   1              SDA = 1;                //拉高数据线
+  35   1              delay_5us();
+  36   1      }
+  37          
+  38          /**********IIC发送应答信号***************/
+  39          //0：应答       1：非应答
+  40          void IIC_SendACK(bit ack)
+  41          {
+  42   1              SDA = ack;              //发送应答信号
+  43   1              SCL = 1;                //拉高时钟信号
+  44   1              delay_5us();    
+  45   1              SCL = 0;                //拉低时钟信号
+  46   1              delay_5us();
+  47   1      }
+  48          
+  49          /*********IIC接收应答信号***********/
+  50          bit IIC_RecvACK(void)
+  51          {
+  52   1              bit recv_data;
+  53   1              SCL = 1;                //拉高时钟信号
+  54   1              delay_5us();
+C51 COMPILER V9.54   MY_IIC                                                                10/19/2021 17:29:27 PAGE 2   
+
+  55   1              recv_data = SDA;        //接收到数据
+  56   1              SCL = 0;                //拉低时钟信号
+  57   1              delay_5us();
+  58   1              return recv_data;
+  59   1      }
+  60          
+  61          /***********IIC总线发送一个字节数据**********/
+  62          void IIC_SendByte(unsigned char send_data)
+  63          {
+  64   1              unsigned char i;
+  65   1              for(i = 0;i < 8;i++)    //发送8位数据
+  66   1              {
+  67   2                      SDA = 0X80 & send_data;
+  68   2                      send_data <<= 1;
+  69   2                      SCL = 1;
+  70   2                      delay_5us();
+  71   2                      SCL = 0;
+  72   2                      delay_5us();
+  73   2              }
+  74   1              IIC_RecvACK();          //接收应答信号
+  75   1      }
+  76          
+  77          /***********IIC总线接收一个字节的数据******************/
+  78          unsigned char IIC_RecvByte(void)
+  79          {
+  80   1              unsigned char i;
+  81   1              unsigned char recv_data = 0;
+  82   1              SDA = 1;                //使能内部上拉，准备读取数据
+  83   1              for(i = 0;i < 8;i++)
+  84   1              {
+  85   2                      recv_data <<= 1;
+  86   2                      SCL = 1;
+  87   2                      delay_5us();
+  88   2                      recv_data |= SDA;       //读取数据
+  89   2                      SCL = 0;
+  90   2                      delay_5us();
+  91   2              }
+  92   1              return recv_data;
+  93   1      }
+  94          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    140    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----       2
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
