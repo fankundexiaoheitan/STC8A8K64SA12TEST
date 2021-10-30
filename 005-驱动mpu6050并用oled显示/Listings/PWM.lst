@@ -1,0 +1,53 @@
+C51 COMPILER V9.54   PWM                                                                   10/30/2021 11:25:35 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE PWM
+OBJECT MODULE PLACED IN .\Objects\PWM.obj
+COMPILER INVOKED BY: C:\xuexigongju\keil\C51\BIN\C51.EXE PWM.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listi
+                    -ngs\PWM.lst) OBJECT(.\Objects\PWM.obj)
+
+line level    source
+
+   1          #include "PWM.h"
+   2          #include "stc8.h"
+   3          
+   4          void PWM_Init(void)
+   5          {
+   6   1              P_SW2 = 0X80;
+   7   1              PWMCKS = 0X00;          //PWM时钟为系统时钟
+   8   1              //1KHZ频率
+   9   1              PWMC = 30000-1;         //设置PWM周期为24000个PWM时钟   注意此寄存器为15位      pwm频率 = 系统工作频率24M/（PWMC+1）
+  10   1              PWM0T1 = 0;
+  11   1              PWM0T2 = ((30000-1)-((30000-1)*0.90));
+  12   1              PWM0CR = 0X80;          //使能PWM0输出
+  13   1              
+  14   1              PWM1T1 = 0;
+  15   1              PWM1T2 = ((30000-1)-((30000-1)*0.90));
+  16   1              PWM1CR = 0X80;          //使能PWM0输出
+  17   1              
+  18   1              PWM2T1 = 0;
+  19   1              PWM2T2 = ((30000-1)-((30000-1)*0.90));
+  20   1              PWM2CR = 0X80;          //使能PWM0输出
+  21   1              
+  22   1              PWM3T1 = 0;
+  23   1              PWM3T2 = ((30000-1)-((30000-1)*0.90));
+  24   1              PWM3CR = 0X80;          //使能PWM0输出
+  25   1              P_SW2 = 0X00;
+  26   1              
+  27   1              //在使能PWM中此程序语句必须放在最后，具体原因请看手册547页
+  28   1              PWMCR = 0X80;           //      启动PWM模块
+  29   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    101    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

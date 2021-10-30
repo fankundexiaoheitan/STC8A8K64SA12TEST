@@ -1,0 +1,9 @@
+".\Objects\main.obj",
+".\Objects\oled.obj",
+".\Objects\my_IIC2.obj",
+".\Objects\my_IIC.obj",
+".\Objects\mpu6050.obj",
+".\Objects\codetab.obj",
+".\Objects\STARTUP.obj" 
+TO ".\Objects\Çý¶¯mpu6050" 
+PRINT(".\Listings\Çý¶¯mpu6050.m51") RAMSIZE(256) 

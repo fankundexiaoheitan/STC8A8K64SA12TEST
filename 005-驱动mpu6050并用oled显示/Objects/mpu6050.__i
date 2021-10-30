@@ -1,0 +1,1 @@
+"mpu6050.c" OPTIMIZE (8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\mpu6050.lst) OBJECT(.\Objects\mpu6050.obj)
