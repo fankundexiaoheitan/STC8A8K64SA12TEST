@@ -27,7 +27,6 @@ unsigned char Single_ReadIIC_2(unsigned char PC_Address,unsigned char REG_Addres
 //******************************************************************************************************
 //初始化MPU6050
 //******************************************************************************************************
-unsigned char read_flag = 0;
 void InitMPU6050()
 {
 	Single_WriteIIC_2(SlaveAddress,SMPLRT_DIV, 0x07);	//设置陀螺仪采样率为125hz

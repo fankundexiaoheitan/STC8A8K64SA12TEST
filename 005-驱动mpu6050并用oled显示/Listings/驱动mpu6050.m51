@@ -1,4 +1,4 @@
-BL51 BANKED LINKER/LOCATER V6.22                                                        10/30/2021  11:45:54  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22                                                        10/30/2021  11:53:44  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
@@ -23,7 +23,6 @@ INPUT MODULES INCLUDED:
   C:\XUEXIGONGJU\KEIL\C51\LIB\C51FPS.LIB (?C?FCAST)
   C:\XUEXIGONGJU\KEIL\C51\LIB\C51FPS.LIB (?C?CASTF)
   C:\XUEXIGONGJU\KEIL\C51\LIB\C51FPS.LIB (?C?FPGETOPN)
-  C:\XUEXIGONGJU\KEIL\C51\LIB\C51S.LIB (?C_INIT)
   C:\XUEXIGONGJU\KEIL\C51\LIB\C51S.LIB (?C?CLDOPTR)
   C:\XUEXIGONGJU\KEIL\C51\LIB\C51S.LIB (?C?IMUL)
   C:\XUEXIGONGJU\KEIL\C51\LIB\C51S.LIB (?C?UIDIV)
@@ -44,11 +43,11 @@ LINK MAP OF MODULE:  .\Objects\驱动mpu6050 (MAIN)
             BIT     0020H.0   0000H.1   UNIT         ?BI?IIC_SENDACK?MY_IIC
             BIT     0020H.1   0000H.1   UNIT         _BIT_GROUP_
                     0020H.2   0000H.6                *** GAP ***
-            DATA    0021H     000FH     UNIT         ?DT?MPU6050
-            DATA    0030H     000CH     UNIT         ?DT?_OLED_TIME?OLED
-            DATA    003CH     0007H     UNIT         ?DT?_OLED_BMP?OLED
-            DATA    0043H     0007H     UNIT         ?DT?_OLED_WENZI?OLED
-            IDATA   004AH     0001H     UNIT         ?STACK
+            DATA    0021H     000EH     UNIT         ?DT?MPU6050
+            DATA    002FH     000CH     UNIT         ?DT?_OLED_TIME?OLED
+            DATA    003BH     0007H     UNIT         ?DT?_OLED_BMP?OLED
+            DATA    0042H     0007H     UNIT         ?DT?_OLED_WENZI?OLED
+            IDATA   0049H     0001H     UNIT         ?STACK
 
             * * * * * * *   C O D E   M E M O R Y   * * * * * * *
             CODE    0000H     0003H     ABSOLUTE     
@@ -58,41 +57,40 @@ LINK MAP OF MODULE:  .\Objects\驱动mpu6050 (MAIN)
             CODE    158DH     009EH     UNIT         ?PR?OLED_INIT?OLED
             CODE    162BH     0096H     UNIT         ?PR?_OLED_SHOWNUM?OLED
             CODE    16C1H     008DH     UNIT         ?PR?_OLED_P8X16STR?OLED
-            CODE    174EH     008CH     UNIT         ?C_C51STARTUP
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/30/2021  11:45:54  PAGE 2
+            CODE    174EH     0079H     UNIT         ?PR?MAIN?MAIN
+            CODE    17C7H     0076H     UNIT         ?PR?READ_MPU6050?MPU6050
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/30/2021  11:53:44  PAGE 2
 
 
-            CODE    17DAH     0079H     UNIT         ?PR?MAIN?MAIN
-            CODE    1853H     0076H     UNIT         ?PR?READ_MPU6050?MPU6050
-            CODE    18C9H     0070H     UNIT         ?PR?_OLED_P8X16CH?OLED
-            CODE    1939H     004DH     UNIT         ?PR?_OLED_BMP?OLED
-            CODE    1986H     004DH     UNIT         ?PR?_OLED_WENZI?OLED
-            CODE    19D3H     0030H     UNIT         ?PR?OLED_CLS?OLED
-            CODE    1A03H     002FH     UNIT         ?PR?_OLED_FILL?OLED
-            CODE    1A32H     002DH     UNIT         ?PR?_OLED_WRDAT?OLED
-            CODE    1A5FH     002DH     UNIT         ?PR?INITMPU6050?MPU6050
-            CODE    1A8CH     002BH     UNIT         ?PR?_SINGLE_READIIC_2?MPU6050
-            CODE    1AB7H     0025H     UNIT         ?PR?DELAY_5US_B?MY_IIC2
-            CODE    1ADCH     0025H     UNIT         ?PR?DELAY_5US?MY_IIC
-            CODE    1B01H     001EH     UNIT         ?CO?MAIN
-            CODE    1B1FH     001EH     UNIT         ?PR?_DELAY?OLED
-            CODE    1B3DH     001BH     UNIT         ?PR?_OLED_SET_POS?OLED
-            CODE    1B58H     001BH     UNIT         ?PR?_IIC2_SENDBYTE?MY_IIC2
-            CODE    1B73H     001BH     UNIT         ?PR?_IIC_SENDBYTE?MY_IIC
-            CODE    1B8EH     001BH     UNIT         ?PR?_SINGLE_WRITEIIC_2?MPU6050
-            CODE    1BA9H     001AH     UNIT         ?PR?_OLED_WRCMD?OLED
-            CODE    1BC3H     0018H     UNIT         ?PR?_OLED_POW?OLED
-            CODE    1BDBH     0018H     UNIT         ?PR?IIC2_RECVBYTE?MY_IIC2
-            CODE    1BF3H     0018H     UNIT         ?PR?IIC_RECVBYTE?MY_IIC
-            CODE    1C0BH     0011H     UNIT         ?PR?IIC2_RECVACK?MY_IIC2
-            CODE    1C1CH     0011H     UNIT         ?PR?IIC_RECVACK?MY_IIC
-            CODE    1C2DH     000FH     UNIT         ?PR?IIC2_START?MY_IIC2
-            CODE    1C3CH     000FH     UNIT         ?PR?IIC_START?MY_IIC
-            CODE    1C4BH     000EH     UNIT         ?PR?IIC2_SENDACK?MY_IIC2
-            CODE    1C59H     000EH     UNIT         ?PR?IIC_SENDACK?MY_IIC
-            CODE    1C67H     000CH     UNIT         ?PR?IIC2_STOP?MY_IIC2
-            CODE    1C73H     000CH     UNIT         ?PR?IIC_STOP?MY_IIC
-            CODE    1C7FH     0004H     UNIT         ?C_INITSEG
+            CODE    183DH     0070H     UNIT         ?PR?_OLED_P8X16CH?OLED
+            CODE    18ADH     004DH     UNIT         ?PR?_OLED_BMP?OLED
+            CODE    18FAH     004DH     UNIT         ?PR?_OLED_WENZI?OLED
+            CODE    1947H     0030H     UNIT         ?PR?OLED_CLS?OLED
+            CODE    1977H     002FH     UNIT         ?PR?_OLED_FILL?OLED
+            CODE    19A6H     002DH     UNIT         ?PR?_OLED_WRDAT?OLED
+            CODE    19D3H     002DH     UNIT         ?PR?INITMPU6050?MPU6050
+            CODE    1A00H     002BH     UNIT         ?PR?_SINGLE_READIIC_2?MPU6050
+            CODE    1A2BH     0025H     UNIT         ?PR?DELAY_5US_B?MY_IIC2
+            CODE    1A50H     0025H     UNIT         ?PR?DELAY_5US?MY_IIC
+            CODE    1A75H     001EH     UNIT         ?CO?MAIN
+            CODE    1A93H     001EH     UNIT         ?PR?_DELAY?OLED
+            CODE    1AB1H     001BH     UNIT         ?PR?_OLED_SET_POS?OLED
+            CODE    1ACCH     001BH     UNIT         ?PR?_IIC2_SENDBYTE?MY_IIC2
+            CODE    1AE7H     001BH     UNIT         ?PR?_IIC_SENDBYTE?MY_IIC
+            CODE    1B02H     001BH     UNIT         ?PR?_SINGLE_WRITEIIC_2?MPU6050
+            CODE    1B1DH     001AH     UNIT         ?PR?_OLED_WRCMD?OLED
+            CODE    1B37H     0018H     UNIT         ?PR?_OLED_POW?OLED
+            CODE    1B4FH     0018H     UNIT         ?PR?IIC2_RECVBYTE?MY_IIC2
+            CODE    1B67H     0018H     UNIT         ?PR?IIC_RECVBYTE?MY_IIC
+            CODE    1B7FH     0011H     UNIT         ?PR?IIC2_RECVACK?MY_IIC2
+            CODE    1B90H     0011H     UNIT         ?PR?IIC_RECVACK?MY_IIC
+            CODE    1BA1H     000FH     UNIT         ?PR?IIC2_START?MY_IIC2
+            CODE    1BB0H     000FH     UNIT         ?PR?IIC_START?MY_IIC
+            CODE    1BBFH     000EH     UNIT         ?PR?IIC2_SENDACK?MY_IIC2
+            CODE    1BCDH     000EH     UNIT         ?PR?IIC_SENDACK?MY_IIC
+            CODE    1BDBH     000CH     UNIT         ?PR?IIC2_STOP?MY_IIC2
+            CODE    1BE7H     000CH     UNIT         ?PR?IIC_STOP?MY_IIC
+            CODE    1BF3H     000CH     UNIT         ?C_C51STARTUP
 
 
 
@@ -104,7 +102,6 @@ SEGMENT                                   BIT_GROUP          DATA_GROUP
 --------------------------------------------------------------------------
 ?C_C51STARTUP                          -----    -----      -----    -----
   +--> ?PR?MAIN?MAIN
-  +--> ?C_INITSEG
 
 ?PR?MAIN?MAIN                          -----    -----      -----    -----
   +--> ?PR?INITMPU6050?MPU6050
@@ -119,12 +116,12 @@ SEGMENT                                   BIT_GROUP          DATA_GROUP
   +--> ?PR?_SINGLE_WRITEIIC_2?MPU6050
 
 ?PR?_SINGLE_WRITEIIC_2?MPU6050         -----    -----      0008H    0003H
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/30/2021  11:45:54  PAGE 3
-
-
   +--> ?PR?IIC2_START?MY_IIC2
   +--> ?PR?_IIC2_SENDBYTE?MY_IIC2
   +--> ?PR?IIC2_STOP?MY_IIC2
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/30/2021  11:53:44  PAGE 3
+
+
 
 ?PR?IIC2_START?MY_IIC2                 -----    -----      -----    -----
   +--> ?PR?DELAY_5US_B?MY_IIC2
@@ -179,12 +176,12 @@ SEGMENT                                   BIT_GROUP          DATA_GROUP
 ?PR?OLED_CLS?OLED                      -----    -----      0008H    0002H
   +--> ?PR?_OLED_WRCMD?OLED
   +--> ?PR?_OLED_WRDAT?OLED
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/30/2021  11:45:54  PAGE 4
-
-
 
 ?PR?_OLED_P8X16STR?OLED                -----    -----      0008H    0008H
   +--> ?PR?_OLED_SET_POS?OLED
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/30/2021  11:53:44  PAGE 4
+
+
   +--> ?PR?_OLED_WRDAT?OLED
   +--> ?CO?CODETAB
 
@@ -235,31 +232,31 @@ SYMBOL TABLE OF MODULE:  .\Objects\驱动mpu6050 (MAIN)
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
   D:00D8H         PUBLIC        CCON
-  C:17DAH         PUBLIC        main
+  C:174EH         PUBLIC        main
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
   D:00D0H         PUBLIC        PSW
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/30/2021  11:45:54  PAGE 5
-
-
   -------         PROC          MAIN
-  C:17DAH         LINE#         16
-  C:17DAH         LINE#         17
-  C:17DAH         LINE#         18
-  C:17DDH         LINE#         19
-  C:17E0H         LINE#         20
-  C:17E3H         LINE#         21
-  C:17EFH         LINE#         22
-  C:17FCH         LINE#         23
-  C:1809H         LINE#         24
-  C:1816H         LINE#         25
-  C:1816H         LINE#         26
-  C:1816H         LINE#         27
-  C:1819H         LINE#         29
-  C:1827H         LINE#         30
-  C:1835H         LINE#         31
-  C:1843H         LINE#         32
-  C:1851H         LINE#         33
+  C:174EH         LINE#         16
+  C:174EH         LINE#         17
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/30/2021  11:53:44  PAGE 5
+
+
+  C:174EH         LINE#         18
+  C:1751H         LINE#         19
+  C:1754H         LINE#         20
+  C:1757H         LINE#         21
+  C:1763H         LINE#         22
+  C:1770H         LINE#         23
+  C:177DH         LINE#         24
+  C:178AH         LINE#         25
+  C:178AH         LINE#         26
+  C:178AH         LINE#         27
+  C:178DH         LINE#         29
+  C:179BH         LINE#         30
+  C:17A9H         LINE#         31
+  C:17B7H         LINE#         32
+  C:17C5H         LINE#         33
   -------         ENDPROC       MAIN
   -------         ENDMOD        MAIN
 
@@ -274,24 +271,24 @@ SYMBOL TABLE OF MODULE:  .\Objects\驱动mpu6050 (MAIN)
   D:00E8H         PUBLIC        P6
   D:00F8H         PUBLIC        P7
   D:00A8H         PUBLIC        IE
-  C:1A03H         PUBLIC        _OLED_Fill
-  C:1B1FH         PUBLIC        _delay
-  C:1986H         PUBLIC        _OLED_WENZI
+  C:1977H         PUBLIC        _OLED_Fill
+  C:1A93H         PUBLIC        _delay
+  C:18FAH         PUBLIC        _OLED_WENZI
   D:00B8H         PUBLIC        IP
-  C:18C9H         PUBLIC        _OLED_P8x16Ch
+  C:183DH         PUBLIC        _OLED_P8x16Ch
   C:158DH         PUBLIC        OLED_Init
   D:00D8H         PUBLIC        CCON
   C:16C1H         PUBLIC        _OLED_P8x16Str
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
   C:14B8H         PUBLIC        _OLED_TIME
-  C:1B3DH         PUBLIC        _OLED_Set_Pos
+  C:1AB1H         PUBLIC        _OLED_Set_Pos
   C:162BH         PUBLIC        _OLED_ShowNum
-  C:1BC3H         PUBLIC        _oled_pow
-  C:1939H         PUBLIC        _OLED_BMP
-  C:1BACH         PUBLIC        _OLED_WrCmd
-  C:19D3H         PUBLIC        OLED_CLS
-  C:1A48H         PUBLIC        _OLED_WrDat
+  C:1B37H         PUBLIC        _oled_pow
+  C:18ADH         PUBLIC        _OLED_BMP
+  C:1B20H         PUBLIC        _OLED_WrCmd
+  C:1947H         PUBLIC        OLED_CLS
+  C:19BCH         PUBLIC        _OLED_WrDat
   D:00D0H         PUBLIC        PSW
   -------         PROC          _DELAY
   D:0006H         SYMBOL        z
@@ -299,51 +296,51 @@ SYMBOL TABLE OF MODULE:  .\Objects\驱动mpu6050 (MAIN)
   D:0006H         SYMBOL        x
   D:0004H         SYMBOL        y
   -------         ENDDO         
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/30/2021  11:45:54  PAGE 6
+  C:1A93H         LINE#         10
+  C:1A93H         LINE#         11
+  C:1A93H         LINE#         13
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/30/2021  11:53:44  PAGE 6
 
 
-  C:1B1FH         LINE#         10
-  C:1B1FH         LINE#         11
-  C:1B1FH         LINE#         13
-  C:1B28H         LINE#         14
-  C:1B3CH         LINE#         15
+  C:1A9CH         LINE#         14
+  C:1AB0H         LINE#         15
   -------         ENDPROC       _DELAY
-  C:1A39H         SYMBOL        L?0095
-  C:1A43H         SYMBOL        L?0096
+  C:19ADH         SYMBOL        L?0095
+  C:19B7H         SYMBOL        L?0096
   -------         PROC          L?0094
   -------         ENDPROC       L?0094
-  C:1A39H         SYMBOL        L?0095
-  C:1A43H         SYMBOL        L?0096
+  C:19ADH         SYMBOL        L?0095
+  C:19B7H         SYMBOL        L?0096
   -------         PROC          _OLED_WRDAT
   D:0014H         SYMBOL        IIC_Data
-  C:1A48H         LINE#         17
-  C:1A4AH         LINE#         18
-  C:1A4AH         LINE#         19
-  C:1A4DH         LINE#         20
-  C:1A52H         LINE#         21
-  C:1A57H         LINE#         22
-  C:1A5CH         LINE#         23
+  C:19BCH         LINE#         17
+  C:19BEH         LINE#         18
+  C:19BEH         LINE#         19
+  C:19C1H         LINE#         20
+  C:19C6H         LINE#         21
+  C:19CBH         LINE#         22
+  C:19D0H         LINE#         23
   -------         ENDPROC       _OLED_WRDAT
   -------         PROC          L?0097
   -------         ENDPROC       L?0097
   -------         PROC          _OLED_WRCMD
   D:0015H         SYMBOL        IIC_Command
-  C:1BACH         LINE#         26
-  C:1BAEH         LINE#         27
-  C:1BAEH         LINE#         28
-  C:1BB1H         LINE#         29
-  C:1BB6H         LINE#         30
-  C:1BBBH         LINE#         31
-  C:1BC0H         LINE#         32
+  C:1B20H         LINE#         26
+  C:1B22H         LINE#         27
+  C:1B22H         LINE#         28
+  C:1B25H         LINE#         29
+  C:1B2AH         LINE#         30
+  C:1B2FH         LINE#         31
+  C:1B34H         LINE#         32
   -------         ENDPROC       _OLED_WRCMD
   -------         PROC          _OLED_SET_POS
   D:0014H         SYMBOL        x
   D:0005H         SYMBOL        y
-  C:1B3DH         LINE#         35
-  C:1B3FH         LINE#         36
-  C:1B3FH         LINE#         37
-  C:1B43H         LINE#         38
-  C:1B50H         LINE#         39
+  C:1AB1H         LINE#         35
+  C:1AB3H         LINE#         36
+  C:1AB3H         LINE#         37
+  C:1AB7H         LINE#         38
+  C:1AC4H         LINE#         39
   -------         ENDPROC       _OLED_SET_POS
   -------         PROC          _OLED_FILL
   D:0008H         SYMBOL        bmp_dat
@@ -351,37 +348,37 @@ SYMBOL TABLE OF MODULE:  .\Objects\驱动mpu6050 (MAIN)
   D:0009H         SYMBOL        y
   D:000AH         SYMBOL        x
   -------         ENDDO         
-  C:1A03H         LINE#         42
-  C:1A05H         LINE#         43
-  C:1A05H         LINE#         45
-  C:1A08H         LINE#         46
-  C:1A08H         LINE#         47
-  C:1A0DH         LINE#         48
-  C:1A12H         LINE#         49
-  C:1A17H         LINE#         50
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/30/2021  11:45:54  PAGE 7
+  C:1977H         LINE#         42
+  C:1979H         LINE#         43
+  C:1979H         LINE#         45
+  C:197CH         LINE#         46
+  C:197CH         LINE#         47
+  C:1981H         LINE#         48
+  C:1986H         LINE#         49
+  C:198BH         LINE#         50
+  C:198EH         LINE#         51
+  C:199CH         LINE#         52
+  C:19A5H         LINE#         53
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/30/2021  11:53:44  PAGE 7
 
 
-  C:1A1AH         LINE#         51
-  C:1A28H         LINE#         52
-  C:1A31H         LINE#         53
   -------         ENDPROC       _OLED_FILL
   -------         PROC          OLED_CLS
   -------         DO            
   D:0008H         SYMBOL        y
   D:0009H         SYMBOL        x
   -------         ENDDO         
-  C:19D3H         LINE#         55
-  C:19D3H         LINE#         56
-  C:19D3H         LINE#         58
-  C:19D6H         LINE#         59
-  C:19D6H         LINE#         60
-  C:19DEH         LINE#         61
-  C:19E3H         LINE#         62
-  C:19E8H         LINE#         63
-  C:19EBH         LINE#         64
-  C:19F9H         LINE#         65
-  C:1A02H         LINE#         66
+  C:1947H         LINE#         55
+  C:1947H         LINE#         56
+  C:1947H         LINE#         58
+  C:194AH         LINE#         59
+  C:194AH         LINE#         60
+  C:1952H         LINE#         61
+  C:1957H         LINE#         62
+  C:195CH         LINE#         63
+  C:195FH         LINE#         64
+  C:196DH         LINE#         65
+  C:1976H         LINE#         66
   -------         ENDPROC       OLED_CLS
   -------         PROC          OLED_INIT
   C:158DH         LINE#         68
@@ -419,12 +416,12 @@ SYMBOL TABLE OF MODULE:  .\Objects\驱动mpu6050 (MAIN)
   C:1625H         LINE#         100
   -------         ENDPROC       OLED_INIT
   -------         PROC          _OLED_P8X16STR
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/30/2021  11:45:54  PAGE 8
-
-
   D:0008H         SYMBOL        x
   D:0009H         SYMBOL        y
   D:000AH         SYMBOL        ch
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/30/2021  11:53:44  PAGE 8
+
+
   -------         DO            
   D:000DH         SYMBOL        c
   D:000EH         SYMBOL        i
@@ -460,35 +457,35 @@ SYMBOL TABLE OF MODULE:  .\Objects\驱动mpu6050 (MAIN)
   D:0012H         SYMBOL        c
   D:0013H         SYMBOL        i
   -------         ENDDO         
-  C:18C9H         LINE#         126
-  C:18CDH         LINE#         127
-  C:18CDH         LINE#         128
-  C:18D2H         LINE#         129
-  C:18D7H         LINE#         130
-  C:18E3H         LINE#         131
-  C:18EAH         LINE#         132
-  C:18EDH         LINE#         133
-  C:1901H         LINE#         134
-  C:190AH         LINE#         135
-  C:190DH         LINE#         136
-  C:1932H         LINE#         137
-  C:1938H         LINE#         138
+  C:183DH         LINE#         126
+  C:1841H         LINE#         127
+  C:1841H         LINE#         128
+  C:1846H         LINE#         129
+  C:184BH         LINE#         130
+  C:1857H         LINE#         131
+  C:185EH         LINE#         132
+  C:1861H         LINE#         133
+  C:1875H         LINE#         134
+  C:187EH         LINE#         135
+  C:1881H         LINE#         136
+  C:18A6H         LINE#         137
+  C:18ACH         LINE#         138
   -------         ENDPROC       _OLED_P8X16CH
   -------         PROC          _OLED_POW
   D:0010H         SYMBOL        m
   D:0001H         SYMBOL        n
   -------         DO            
   D:0006H         SYMBOL        result
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/30/2021  11:45:54  PAGE 9
-
-
   -------         ENDDO         
-  C:1BC3H         LINE#         139
-  C:1BC7H         LINE#         140
-  C:1BC7H         LINE#         141
-  C:1BCBH         LINE#         142
-  C:1BDAH         LINE#         143
-  C:1BDAH         LINE#         144
+  C:1B37H         LINE#         139
+  C:1B3BH         LINE#         140
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/30/2021  11:53:44  PAGE 9
+
+
+  C:1B3BH         LINE#         141
+  C:1B3FH         LINE#         142
+  C:1B4EH         LINE#         143
+  C:1B4EH         LINE#         144
   -------         ENDPROC       _OLED_POW
   -------         PROC          _OLED_SHOWNUM
   D:0008H         SYMBOL        x
@@ -527,58 +524,58 @@ SYMBOL TABLE OF MODULE:  .\Objects\驱动mpu6050 (MAIN)
   C:16C0H         LINE#         181
   -------         ENDPROC       _OLED_SHOWNUM
   -------         PROC          _OLED_BMP
-  D:003CH         SYMBOL        x
-  D:003DH         SYMBOL        y
-  D:003EH         SYMBOL        ch
+  D:003BH         SYMBOL        x
+  D:003CH         SYMBOL        y
+  D:003DH         SYMBOL        ch
   -------         DO            
-  D:0041H         SYMBOL        i
-  D:0042H         SYMBOL        j
+  D:0040H         SYMBOL        i
+  D:0041H         SYMBOL        j
   -------         ENDDO         
-  C:1939H         LINE#         183
-  C:1943H         LINE#         184
-  C:1943H         LINE#         185
-  C:1948H         LINE#         186
-  C:194AH         LINE#         187
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/30/2021  11:45:54  PAGE 10
+  C:18ADH         LINE#         183
+  C:18B7H         LINE#         184
+  C:18B7H         LINE#         185
+  C:18BCH         LINE#         186
+  C:18BEH         LINE#         187
+  C:18BEH         LINE#         188
+  C:18C8H         LINE#         189
+  C:18CBH         LINE#         190
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/30/2021  11:53:44  PAGE 10
 
 
-  C:194AH         LINE#         188
-  C:1954H         LINE#         189
-  C:1957H         LINE#         190
-  C:197CH         LINE#         191
-  C:1985H         LINE#         192
+  C:18F0H         LINE#         191
+  C:18F9H         LINE#         192
   -------         ENDPROC       _OLED_BMP
   -------         PROC          _OLED_WENZI
-  D:0043H         SYMBOL        x
-  D:0044H         SYMBOL        y
-  D:0045H         SYMBOL        ch
+  D:0042H         SYMBOL        x
+  D:0043H         SYMBOL        y
+  D:0044H         SYMBOL        ch
   -------         DO            
-  D:0048H         SYMBOL        i
-  D:0049H         SYMBOL        j
+  D:0047H         SYMBOL        i
+  D:0048H         SYMBOL        j
   -------         ENDDO         
-  C:1986H         LINE#         195
-  C:1990H         LINE#         196
-  C:1990H         LINE#         197
-  C:1995H         LINE#         198
-  C:1997H         LINE#         199
-  C:1997H         LINE#         200
-  C:19A1H         LINE#         201
-  C:19A4H         LINE#         202
-  C:19C9H         LINE#         203
-  C:19D2H         LINE#         204
+  C:18FAH         LINE#         195
+  C:1904H         LINE#         196
+  C:1904H         LINE#         197
+  C:1909H         LINE#         198
+  C:190BH         LINE#         199
+  C:190BH         LINE#         200
+  C:1915H         LINE#         201
+  C:1918H         LINE#         202
+  C:193DH         LINE#         203
+  C:1946H         LINE#         204
   -------         ENDPROC       _OLED_WENZI
   -------         PROC          _OLED_TIME
-  D:0030H         SYMBOL        x
-  D:0031H         SYMBOL        y
-  D:0032H         SYMBOL        ch
+  D:002FH         SYMBOL        x
+  D:0030H         SYMBOL        y
+  D:0031H         SYMBOL        ch
   -------         DO            
-  D:0035H         SYMBOL        c
-  D:0036H         SYMBOL        i
-  D:0037H         SYMBOL        j
-  D:0038H         SYMBOL        k
-  D:0039H         SYMBOL        flag
-  D:003AH         SYMBOL        x_source
-  D:003BH         SYMBOL        y_source
+  D:0034H         SYMBOL        c
+  D:0035H         SYMBOL        i
+  D:0036H         SYMBOL        j
+  D:0037H         SYMBOL        k
+  D:0038H         SYMBOL        flag
+  D:0039H         SYMBOL        x_source
+  D:003AH         SYMBOL        y_source
   -------         ENDDO         
   C:14B8H         LINE#         207
   C:14C2H         LINE#         208
@@ -599,12 +596,12 @@ SYMBOL TABLE OF MODULE:  .\Objects\驱动mpu6050 (MAIN)
   C:14FCH         LINE#         224
   C:14FCH         LINE#         225
   C:1506H         LINE#         226
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/30/2021  11:45:54  PAGE 11
-
-
   C:1509H         LINE#         227
   C:152CH         LINE#         228
   C:1535H         LINE#         229
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/30/2021  11:53:44  PAGE 11
+
+
   C:1537H         LINE#         230
   C:1539H         LINE#         232
   C:1539H         LINE#         233
@@ -632,123 +629,123 @@ SYMBOL TABLE OF MODULE:  .\Objects\驱动mpu6050 (MAIN)
   D:00C8H         PUBLIC        P5
   D:00E8H         PUBLIC        P6
   D:00F8H         PUBLIC        P7
-  C:1B58H         PUBLIC        _IIC2_SendByte
+  C:1ACCH         PUBLIC        _IIC2_SendByte
   D:00A8H         PUBLIC        IE
-  C:1C67H         PUBLIC        IIC2_Stop
-  C:1BDBH         PUBLIC        IIC2_RecvByte
+  C:1BDBH         PUBLIC        IIC2_Stop
+  C:1B4FH         PUBLIC        IIC2_RecvByte
   D:00B8H         PUBLIC        IP
   D:00D8H         PUBLIC        CCON
   B:0080H.0       PUBLIC        P00
   B:0080H.1       PUBLIC        P01
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
-  C:1C4BH         PUBLIC        IIC2_SendACK
-  C:1C0BH         PUBLIC        IIC2_RecvACK
-  C:1ABDH         PUBLIC        delay_5us_b
-  C:1C2DH         PUBLIC        IIC2_Start
+  C:1BBFH         PUBLIC        IIC2_SendACK
+  C:1B7FH         PUBLIC        IIC2_RecvACK
+  C:1A31H         PUBLIC        delay_5us_b
+  C:1BA1H         PUBLIC        IIC2_Start
   D:00D0H         PUBLIC        PSW
   -------         PROC          L?0016
   -------         ENDPROC       L?0016
   -------         PROC          DELAY_5US_B
-  C:1ABDH         LINE#         5
-  C:1ABDH         LINE#         6
-  C:1ABDH         LINE#         7
-  C:1AC3H         LINE#         8
-  C:1AC9H         LINE#         9
-  C:1ACFH         LINE#         10
-  C:1AD5H         LINE#         11
-  C:1ADBH         LINE#         12
+  C:1A31H         LINE#         5
+  C:1A31H         LINE#         6
+  C:1A31H         LINE#         7
+  C:1A37H         LINE#         8
+  C:1A3DH         LINE#         9
+  C:1A43H         LINE#         10
+  C:1A49H         LINE#         11
+  C:1A4FH         LINE#         12
   -------         ENDPROC       DELAY_5US_B
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/30/2021  11:45:54  PAGE 12
-
-
   -------         PROC          IIC2_START
-  C:1C2DH         LINE#         17
-  C:1C2DH         LINE#         18
-  C:1C2DH         LINE#         19
-  C:1C2FH         LINE#         20
-  C:1C31H         LINE#         21
-  C:1C34H         LINE#         22
-  C:1C36H         LINE#         23
-  C:1C39H         LINE#         24
-  C:1C3BH         LINE#         25
+  C:1BA1H         LINE#         17
+  C:1BA1H         LINE#         18
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/30/2021  11:53:44  PAGE 12
+
+
+  C:1BA1H         LINE#         19
+  C:1BA3H         LINE#         20
+  C:1BA5H         LINE#         21
+  C:1BA8H         LINE#         22
+  C:1BAAH         LINE#         23
+  C:1BADH         LINE#         24
+  C:1BAFH         LINE#         25
   -------         ENDPROC       IIC2_START
   -------         PROC          IIC2_STOP
-  C:1C67H         LINE#         29
-  C:1C67H         LINE#         30
-  C:1C67H         LINE#         31
-  C:1C69H         LINE#         32
-  C:1C6BH         LINE#         33
-  C:1C6EH         LINE#         34
-  C:1C70H         LINE#         35
+  C:1BDBH         LINE#         29
+  C:1BDBH         LINE#         30
+  C:1BDBH         LINE#         31
+  C:1BDDH         LINE#         32
+  C:1BDFH         LINE#         33
+  C:1BE2H         LINE#         34
+  C:1BE4H         LINE#         35
   -------         ENDPROC       IIC2_STOP
   -------         PROC          IIC2_SENDACK
   B:0020H.1       SYMBOL        ack
-  C:1C4BH         LINE#         40
-  C:1C4BH         LINE#         41
-  C:1C4BH         LINE#         42
-  C:1C4FH         LINE#         43
-  C:1C51H         LINE#         44
-  C:1C54H         LINE#         45
-  C:1C56H         LINE#         46
+  C:1BBFH         LINE#         40
+  C:1BBFH         LINE#         41
+  C:1BBFH         LINE#         42
+  C:1BC3H         LINE#         43
+  C:1BC5H         LINE#         44
+  C:1BC8H         LINE#         45
+  C:1BCAH         LINE#         46
   -------         ENDPROC       IIC2_SENDACK
   -------         PROC          IIC2_RECVACK
   -------         DO            
   B:0020H.1       SYMBOL        recv_data
   -------         ENDDO         
-  C:1C0BH         LINE#         50
-  C:1C0BH         LINE#         51
-  C:1C0BH         LINE#         53
-  C:1C0DH         LINE#         54
-  C:1C10H         LINE#         55
-  C:1C14H         LINE#         56
-  C:1C16H         LINE#         57
-  C:1C19H         LINE#         58
-  C:1C1BH         LINE#         59
+  C:1B7FH         LINE#         50
+  C:1B7FH         LINE#         51
+  C:1B7FH         LINE#         53
+  C:1B81H         LINE#         54
+  C:1B84H         LINE#         55
+  C:1B88H         LINE#         56
+  C:1B8AH         LINE#         57
+  C:1B8DH         LINE#         58
+  C:1B8FH         LINE#         59
   -------         ENDPROC       IIC2_RECVACK
   -------         PROC          _IIC2_SENDBYTE
   D:0007H         SYMBOL        send_data
   -------         DO            
   D:0006H         SYMBOL        i
   -------         ENDDO         
-  C:1B58H         LINE#         62
-  C:1B58H         LINE#         63
-  C:1B58H         LINE#         65
-  C:1B5AH         LINE#         66
-  C:1B5AH         LINE#         67
-  C:1B5EH         LINE#         68
-  C:1B62H         LINE#         70
-  C:1B64H         LINE#         71
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/30/2021  11:45:54  PAGE 13
+  C:1ACCH         LINE#         62
+  C:1ACCH         LINE#         63
+  C:1ACCH         LINE#         65
+  C:1ACEH         LINE#         66
+  C:1ACEH         LINE#         67
+  C:1AD2H         LINE#         68
+  C:1AD6H         LINE#         70
+  C:1AD8H         LINE#         71
+  C:1AD8H         LINE#         72
+  C:1AD8H         LINE#         73
+  C:1ADBH         LINE#         74
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/30/2021  11:53:44  PAGE 13
 
 
-  C:1B64H         LINE#         72
-  C:1B64H         LINE#         73
-  C:1B67H         LINE#         74
-  C:1B69H         LINE#         75
-  C:1B6CH         LINE#         76
-  C:1B70H         LINE#         77
+  C:1ADDH         LINE#         75
+  C:1AE0H         LINE#         76
+  C:1AE4H         LINE#         77
   -------         ENDPROC       _IIC2_SENDBYTE
   -------         PROC          IIC2_RECVBYTE
   -------         DO            
   D:0006H         SYMBOL        i
   D:0007H         SYMBOL        recv_data
   -------         ENDDO         
-  C:1BDBH         LINE#         81
-  C:1BDBH         LINE#         82
-  C:1BDBH         LINE#         84
-  C:1BDDH         LINE#         85
-  C:1BDFH         LINE#         86
-  C:1BE0H         LINE#         87
-  C:1BE0H         LINE#         88
-  C:1BE0H         LINE#         89
-  C:1BE0H         LINE#         90
-  C:1BE3H         LINE#         91
-  C:1BE9H         LINE#         92
-  C:1BEBH         LINE#         93
-  C:1BEEH         LINE#         94
-  C:1BF2H         LINE#         95
-  C:1BF2H         LINE#         96
+  C:1B4FH         LINE#         81
+  C:1B4FH         LINE#         82
+  C:1B4FH         LINE#         84
+  C:1B51H         LINE#         85
+  C:1B53H         LINE#         86
+  C:1B54H         LINE#         87
+  C:1B54H         LINE#         88
+  C:1B54H         LINE#         89
+  C:1B54H         LINE#         90
+  C:1B57H         LINE#         91
+  C:1B5DH         LINE#         92
+  C:1B5FH         LINE#         93
+  C:1B62H         LINE#         94
+  C:1B66H         LINE#         95
+  C:1B66H         LINE#         96
   -------         ENDPROC       IIC2_RECVBYTE
   -------         ENDMOD        MY_IIC2
 
@@ -763,122 +760,122 @@ SYMBOL TABLE OF MODULE:  .\Objects\驱动mpu6050 (MAIN)
   D:00E8H         PUBLIC        P6
   D:00F8H         PUBLIC        P7
   D:00A8H         PUBLIC        IE
-  C:1AE2H         PUBLIC        delay_5us
-  C:1C59H         PUBLIC        IIC_SendACK
-  C:1C1CH         PUBLIC        IIC_RecvACK
+  C:1A56H         PUBLIC        delay_5us
+  C:1BCDH         PUBLIC        IIC_SendACK
+  C:1B90H         PUBLIC        IIC_RecvACK
   D:00B8H         PUBLIC        IP
   D:00D8H         PUBLIC        CCON
   B:0090H.0       PUBLIC        P10
   B:0090H.1       PUBLIC        P11
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
-  C:1C3CH         PUBLIC        IIC_Start
-  C:1B73H         PUBLIC        _IIC_SendByte
-  C:1C73H         PUBLIC        IIC_Stop
-  C:1BF3H         PUBLIC        IIC_RecvByte
+  C:1BB0H         PUBLIC        IIC_Start
+  C:1AE7H         PUBLIC        _IIC_SendByte
+  C:1BE7H         PUBLIC        IIC_Stop
+  C:1B67H         PUBLIC        IIC_RecvByte
   D:00D0H         PUBLIC        PSW
   -------         PROC          L?0016
   -------         ENDPROC       L?0016
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/30/2021  11:45:54  PAGE 14
-
-
   -------         PROC          DELAY_5US
-  C:1AE2H         LINE#         5
-  C:1AE2H         LINE#         6
-  C:1AE2H         LINE#         7
-  C:1AE8H         LINE#         8
-  C:1AEEH         LINE#         9
-  C:1AF4H         LINE#         10
-  C:1AFAH         LINE#         11
-  C:1B00H         LINE#         12
+  C:1A56H         LINE#         5
+  C:1A56H         LINE#         6
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/30/2021  11:53:44  PAGE 14
+
+
+  C:1A56H         LINE#         7
+  C:1A5CH         LINE#         8
+  C:1A62H         LINE#         9
+  C:1A68H         LINE#         10
+  C:1A6EH         LINE#         11
+  C:1A74H         LINE#         12
   -------         ENDPROC       DELAY_5US
   -------         PROC          IIC_START
-  C:1C3CH         LINE#         17
-  C:1C3CH         LINE#         18
-  C:1C3CH         LINE#         19
-  C:1C3EH         LINE#         20
-  C:1C40H         LINE#         21
-  C:1C43H         LINE#         22
-  C:1C45H         LINE#         23
-  C:1C48H         LINE#         24
-  C:1C4AH         LINE#         25
+  C:1BB0H         LINE#         17
+  C:1BB0H         LINE#         18
+  C:1BB0H         LINE#         19
+  C:1BB2H         LINE#         20
+  C:1BB4H         LINE#         21
+  C:1BB7H         LINE#         22
+  C:1BB9H         LINE#         23
+  C:1BBCH         LINE#         24
+  C:1BBEH         LINE#         25
   -------         ENDPROC       IIC_START
   -------         PROC          IIC_STOP
-  C:1C73H         LINE#         29
-  C:1C73H         LINE#         30
-  C:1C73H         LINE#         31
-  C:1C75H         LINE#         32
-  C:1C77H         LINE#         33
-  C:1C7AH         LINE#         34
-  C:1C7CH         LINE#         35
+  C:1BE7H         LINE#         29
+  C:1BE7H         LINE#         30
+  C:1BE7H         LINE#         31
+  C:1BE9H         LINE#         32
+  C:1BEBH         LINE#         33
+  C:1BEEH         LINE#         34
+  C:1BF0H         LINE#         35
   -------         ENDPROC       IIC_STOP
   -------         PROC          IIC_SENDACK
   B:0020H.0       SYMBOL        ack
-  C:1C59H         LINE#         40
-  C:1C59H         LINE#         41
-  C:1C59H         LINE#         42
-  C:1C5DH         LINE#         43
-  C:1C5FH         LINE#         44
-  C:1C62H         LINE#         45
-  C:1C64H         LINE#         46
+  C:1BCDH         LINE#         40
+  C:1BCDH         LINE#         41
+  C:1BCDH         LINE#         42
+  C:1BD1H         LINE#         43
+  C:1BD3H         LINE#         44
+  C:1BD6H         LINE#         45
+  C:1BD8H         LINE#         46
   -------         ENDPROC       IIC_SENDACK
   -------         PROC          IIC_RECVACK
   -------         DO            
   B:0020H.1       SYMBOL        recv_data
   -------         ENDDO         
-  C:1C1CH         LINE#         50
-  C:1C1CH         LINE#         51
-  C:1C1CH         LINE#         53
-  C:1C1EH         LINE#         54
-  C:1C21H         LINE#         55
-  C:1C25H         LINE#         56
-  C:1C27H         LINE#         57
-  C:1C2AH         LINE#         58
-  C:1C2CH         LINE#         59
+  C:1B90H         LINE#         50
+  C:1B90H         LINE#         51
+  C:1B90H         LINE#         53
+  C:1B92H         LINE#         54
+  C:1B95H         LINE#         55
+  C:1B99H         LINE#         56
+  C:1B9BH         LINE#         57
+  C:1B9EH         LINE#         58
+  C:1BA0H         LINE#         59
   -------         ENDPROC       IIC_RECVACK
   -------         PROC          _IIC_SENDBYTE
   D:0007H         SYMBOL        send_data
   -------         DO            
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/30/2021  11:45:54  PAGE 15
-
-
   D:0006H         SYMBOL        i
   -------         ENDDO         
-  C:1B73H         LINE#         62
-  C:1B73H         LINE#         63
-  C:1B73H         LINE#         65
-  C:1B75H         LINE#         66
-  C:1B75H         LINE#         67
-  C:1B79H         LINE#         68
-  C:1B7DH         LINE#         70
-  C:1B7FH         LINE#         71
-  C:1B7FH         LINE#         72
-  C:1B7FH         LINE#         73
-  C:1B82H         LINE#         74
-  C:1B84H         LINE#         75
-  C:1B87H         LINE#         76
-  C:1B8BH         LINE#         77
+  C:1AE7H         LINE#         62
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/30/2021  11:53:44  PAGE 15
+
+
+  C:1AE7H         LINE#         63
+  C:1AE7H         LINE#         65
+  C:1AE9H         LINE#         66
+  C:1AE9H         LINE#         67
+  C:1AEDH         LINE#         68
+  C:1AF1H         LINE#         70
+  C:1AF3H         LINE#         71
+  C:1AF3H         LINE#         72
+  C:1AF3H         LINE#         73
+  C:1AF6H         LINE#         74
+  C:1AF8H         LINE#         75
+  C:1AFBH         LINE#         76
+  C:1AFFH         LINE#         77
   -------         ENDPROC       _IIC_SENDBYTE
   -------         PROC          IIC_RECVBYTE
   -------         DO            
   D:0006H         SYMBOL        i
   D:0007H         SYMBOL        recv_data
   -------         ENDDO         
-  C:1BF3H         LINE#         81
-  C:1BF3H         LINE#         82
-  C:1BF3H         LINE#         84
-  C:1BF5H         LINE#         85
-  C:1BF7H         LINE#         86
-  C:1BF8H         LINE#         87
-  C:1BF8H         LINE#         88
-  C:1BF8H         LINE#         89
-  C:1BF8H         LINE#         90
-  C:1BFBH         LINE#         91
-  C:1C01H         LINE#         92
-  C:1C03H         LINE#         93
-  C:1C06H         LINE#         94
-  C:1C0AH         LINE#         95
-  C:1C0AH         LINE#         96
+  C:1B67H         LINE#         81
+  C:1B67H         LINE#         82
+  C:1B67H         LINE#         84
+  C:1B69H         LINE#         85
+  C:1B6BH         LINE#         86
+  C:1B6CH         LINE#         87
+  C:1B6CH         LINE#         88
+  C:1B6CH         LINE#         89
+  C:1B6CH         LINE#         90
+  C:1B6FH         LINE#         91
+  C:1B75H         LINE#         92
+  C:1B77H         LINE#         93
+  C:1B7AH         LINE#         94
+  C:1B7EH         LINE#         95
+  C:1B7EH         LINE#         96
   -------         ENDPROC       IIC_RECVBYTE
   -------         ENDMOD        MY_IIC
 
@@ -894,30 +891,29 @@ SYMBOL TABLE OF MODULE:  .\Objects\驱动mpu6050 (MAIN)
   D:00F8H         PUBLIC        P7
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
-  D:0021H         PUBLIC        read_flag
-  D:0022H         PUBLIC        MPU6050_Data
+  D:0021H         PUBLIC        MPU6050_Data
   D:00D8H         PUBLIC        CCON
-  C:1A8CH         PUBLIC        _Single_ReadIIC_2
+  C:1A00H         PUBLIC        _Single_ReadIIC_2
   D:0098H         PUBLIC        SCON
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/30/2021  11:45:54  PAGE 16
-
-
   D:0088H         PUBLIC        TCON
-  C:1B8EH         PUBLIC        _Single_WriteIIC_2
-  C:1A5FH         PUBLIC        InitMPU6050
-  C:1853H         PUBLIC        Read_Mpu6050
+  C:1B02H         PUBLIC        _Single_WriteIIC_2
+  C:19D3H         PUBLIC        InitMPU6050
+  C:17C7H         PUBLIC        Read_Mpu6050
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/30/2021  11:53:44  PAGE 16
+
+
   D:00D0H         PUBLIC        PSW
   -------         PROC          _SINGLE_WRITEIIC_2
   D:0008H         SYMBOL        PC_Address
   D:0009H         SYMBOL        REG_Address
   D:000AH         SYMBOL        REG_data
-  C:1B8EH         LINE#         4
-  C:1B94H         LINE#         5
-  C:1B94H         LINE#         6
-  C:1B97H         LINE#         7
-  C:1B9CH         LINE#         8
-  C:1BA1H         LINE#         9
-  C:1BA6H         LINE#         10
+  C:1B02H         LINE#         4
+  C:1B08H         LINE#         5
+  C:1B08H         LINE#         6
+  C:1B0BH         LINE#         7
+  C:1B10H         LINE#         8
+  C:1B15H         LINE#         9
+  C:1B1AH         LINE#         10
   -------         ENDPROC       _SINGLE_WRITEIIC_2
   -------         PROC          _SINGLE_READIIC_2
   D:0017H         SYMBOL        PC_Address
@@ -925,50 +921,50 @@ SYMBOL TABLE OF MODULE:  .\Objects\驱动mpu6050 (MAIN)
   -------         DO            
   D:0019H         SYMBOL        REG_data
   -------         ENDDO         
-  C:1A8CH         LINE#         13
-  C:1A90H         LINE#         14
-  C:1A90H         LINE#         16
-  C:1A93H         LINE#         17
-  C:1A98H         LINE#         18
-  C:1A9DH         LINE#         19
-  C:1AA0H         LINE#         20
-  C:1AA7H         LINE#         21
-  C:1AACH         LINE#         22
-  C:1AB1H         LINE#         23
-  C:1AB4H         LINE#         24
-  C:1AB6H         LINE#         25
+  C:1A00H         LINE#         13
+  C:1A04H         LINE#         14
+  C:1A04H         LINE#         16
+  C:1A07H         LINE#         17
+  C:1A0CH         LINE#         18
+  C:1A11H         LINE#         19
+  C:1A14H         LINE#         20
+  C:1A1BH         LINE#         21
+  C:1A20H         LINE#         22
+  C:1A25H         LINE#         23
+  C:1A28H         LINE#         24
+  C:1A2AH         LINE#         25
   -------         ENDPROC       _SINGLE_READIIC_2
   -------         PROC          INITMPU6050
-  C:1A5FH         LINE#         31
-  C:1A5FH         LINE#         32
-  C:1A5FH         LINE#         33
-  C:1A68H         LINE#         34
-  C:1A71H         LINE#         35
-  C:1A7AH         LINE#         36
-  C:1A83H         LINE#         37
+  C:19D3H         LINE#         30
+  C:19D3H         LINE#         31
+  C:19D3H         LINE#         32
+  C:19DCH         LINE#         33
+  C:19E5H         LINE#         34
+  C:19EEH         LINE#         35
+  C:19F7H         LINE#         36
   -------         ENDPROC       INITMPU6050
   -------         PROC          READ_MPU6050
   -------         DO            
   D:0008H         SYMBOL        buffer
   D:0016H         SYMBOL        i
   -------         ENDDO         
-  C:1853H         LINE#         44
-  C:1853H         LINE#         45
-  C:1853H         LINE#         48
-  C:1856H         LINE#         49
-  C:1856H         LINE#         50
-  C:1867H         LINE#         51
-  C:1870H         LINE#         52
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/30/2021  11:45:54  PAGE 17
+  C:17C7H         LINE#         43
+  C:17C7H         LINE#         44
+  C:17C7H         LINE#         47
+  C:17CAH         LINE#         48
+  C:17CAH         LINE#         49
+  C:17DBH         LINE#         50
+  C:17E4H         LINE#         51
+  C:17ECH         LINE#         52
+  C:17F4H         LINE#         53
+  C:17FCH         LINE#         54
+  C:1821H         LINE#         55
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/30/2021  11:53:44  PAGE 17
 
 
-  C:1878H         LINE#         53
-  C:1880H         LINE#         54
-  C:1888H         LINE#         55
-  C:18ADH         LINE#         56
-  C:18B5H         LINE#         57
-  C:18BDH         LINE#         58
-  C:18C8H         LINE#         60
+  C:1829H         LINE#         56
+  C:1831H         LINE#         57
+  C:183CH         LINE#         59
   -------         ENDPROC       READ_MPU6050
   -------         ENDMOD        MPU6050
 
@@ -982,8 +978,8 @@ SYMBOL TABLE OF MODULE:  .\Objects\驱动mpu6050 (MAIN)
   -------         ENDMOD        CODETAB
 
   -------         MODULE        ?C_STARTUP
-  C:174EH         SEGMENT       ?C_C51STARTUP
-  I:004AH         SEGMENT       ?STACK
+  C:1BF3H         SEGMENT       ?C_C51STARTUP
+  I:0049H         SEGMENT       ?STACK
   C:0000H         PUBLIC        ?C_STARTUP
   D:00E0H         SYMBOL        ACC
   D:00F0H         SYMBOL        B
@@ -992,7 +988,7 @@ SYMBOL TABLE OF MODULE:  .\Objects\驱动mpu6050 (MAIN)
   N:0000H         SYMBOL        IBPSTACK
   N:0100H         SYMBOL        IBPSTACKTOP
   N:0080H         SYMBOL        IDATALEN
-  C:1751H         SYMBOL        IDATALOOP
+  C:1BF6H         SYMBOL        IDATALOOP
   N:0000H         SYMBOL        PBPSTACK
   N:0100H         SYMBOL        PBPSTACKTOP
   N:0000H         SYMBOL        PDATALEN
@@ -1001,31 +997,31 @@ SYMBOL TABLE OF MODULE:  .\Objects\驱动mpu6050 (MAIN)
   N:0000H         SYMBOL        PPAGEENABLE
   D:00A0H         SYMBOL        PPAGE_SFR
   D:0081H         SYMBOL        SP
-  C:174EH         SYMBOL        STARTUP1
+  C:1BF3H         SYMBOL        STARTUP1
   N:0000H         SYMBOL        XBPSTACK
   N:0000H         SYMBOL        XBPSTACKTOP
   N:0000H         SYMBOL        XDATALEN
   N:0000H         SYMBOL        XDATASTART
   C:0000H         LINE#         126
-  C:174EH         LINE#         133
-  C:1750H         LINE#         134
-  C:1751H         LINE#         135
-  C:1752H         LINE#         136
-  C:1754H         LINE#         185
-  C:1757H         LINE#         196
+  C:1BF3H         LINE#         133
+  C:1BF5H         LINE#         134
+  C:1BF6H         LINE#         135
+  C:1BF7H         LINE#         136
+  C:1BF9H         LINE#         185
+  C:1BFCH         LINE#         196
   -------         ENDMOD        ?C_STARTUP
 
   -------         MODULE        ?C?FPADD
   C:11BAH         PUBLIC        ?C?FPADD
   C:11B6H         PUBLIC        ?C?FPSUB
   -------         ENDMOD        ?C?FPADD
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/30/2021  11:45:54  PAGE 18
-
-
 
   -------         MODULE        ?C?FPDIV
   C:12AEH         PUBLIC        ?C?FPDIV
   -------         ENDMOD        ?C?FPDIV
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/30/2021  11:53:44  PAGE 18
+
+
 
   -------         MODULE        ?C?FCAST
   C:1355H         PUBLIC        ?C?FCASTC
@@ -1072,5 +1068,5 @@ SYMBOL TABLE OF MODULE:  .\Objects\驱动mpu6050 (MAIN)
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?IIC_RECVBYTE?MY_IIC
 
-Program Size: data=68.2 xdata=0 code=7299
+Program Size: data=67.2 xdata=0 code=7167
 LINK/LOCATE RUN COMPLETE.  5 WARNING(S),  0 ERROR(S)
